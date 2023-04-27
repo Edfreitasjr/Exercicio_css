@@ -1,0 +1,148 @@
+/*Sintaxe de Box-size - propriedade e valor informamos ao navegador que ele deve respeitar as limitações de layout configuradas no CSS*/
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+/*Estilizar os LINKS na Header um ao lado do outro*/
+header li {
+    display: inline;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    margin-left: 16px;
+}
+
+/*Estilizar os ELEMENTOS na Header um ao lado do outro*/
+header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.container {
+    width: 1366px;
+    margin: 0 auto;
+}
+
+/*Se colocar somente o background-color, todos os elementos header dos artigos irão ficar com o fundo preto. Então usa-se o BODY > HEADER*/
+
+body > header {
+    background-color: #2f3640;
+    padding: 16px 0;
+    color: #f5f6fa;
+}
+
+header li a {
+    color: #f5f6fa;
+    text-decoration: none;
+}
+
+/*Organizou os artigos uma do lado da outro com display flex*/
+
+.articles {
+    display: flex;
+}
+
+/*Para dar espaçamento entre as imagens das articles*/
+
+.articles article img {
+    /*height: 180px;*/
+    width: 100%;
+}
+
+/*Para limitar o numero de noticias por linhas*/
+
+.articles article {
+    width: 30%;
+}
+
+/*Para criar uma nova linha na Pagina*/
+.articles {
+    flex-wrap: wrap;
+}
+
+/*Para distribuir o restante (10%) de espaço vago na pagina*/
+
+.articles {
+    justify-content: space-between;
+}
+
+section {
+    padding: 16px 0;
+}
+
+section h2,
+.articles article {
+    margin-bottom: 16px;
+}
+
+.articles article h3 {
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+/*Configurar estilo botão o LER MAIS...display inline block retirou o botão de cima do texto*/
+
+.articles article a {
+    background-color: blue;
+    color: #fff;
+    padding: 8px;
+    display: inline-block;
+    text-decoration: none;
+    font-weight:  bold;
+    margin-top: 8px;
+}
+
+.articles article a:hover {
+    text-decoration: underline;
+}
+
+/*Alterar as fontes*/
+
+.articles article p,
+.articles article a {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.articles article h3 {
+    font-size: 24px;
+}
+
+section h2 {
+    font-size: 32px;
+}
+
+/*Estilização das ID*/
+
+#sports {
+    background-color: rgba(0, 255, 0, 0.1);
+}
+
+#sports .articles article a {
+    background-color: #009432;
+}
+
+#economy {
+    background-color: #f8f59f;
+}
+
+#economy .articles article a {
+    background-color: #ff9f1a;
+}
+
+#entertainment {
+    background-color: #f89fe2;
+}
+
+#entertainment .articles article a {
+    background-color: #f36bd1;
+}
+
+#technology {
+    background-color: #3e86ec;
+}
+
+#technology .articles article a {
+    background-color: #165ab9;
+}
